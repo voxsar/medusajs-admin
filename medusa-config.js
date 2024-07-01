@@ -55,6 +55,34 @@ const plugins = [
       },
     },
   },
+  {
+    resolve: 'medusa-plugin-variant-images',
+    options: {
+      enableUI: true,
+    },
+  },
+  {
+    resolve: 'medusa-plugin-category-images',
+    options: {
+      enableUI: true,
+    },
+  },
+  {
+    resolve: `medusa-payment-stripe`,
+    options: {
+      api_key: process.env.STRIPE_API_KEY,
+      webhook_secret: process.env.STRIPE_WEBHOOK_SECRET,
+    },
+  },
+  {
+    resolve: `medusa-payment-paypal`,
+    options: {
+      sandbox: process.env.PAYPAL_SANDBOX,
+      clientId: process.env.PAYPAL_CLIENT_ID,
+      clientSecret: process.env.PAYPAL_CLIENT_SECRET,
+      authWebhookId: process.env.PAYPAL_AUTH_WEBHOOK_ID,
+    },
+  },
 ];
 
 const modules = {
