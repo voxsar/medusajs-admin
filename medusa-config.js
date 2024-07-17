@@ -48,7 +48,7 @@ const plugins = [
     options: {
       serve: false,
       autoRebuild: false,
-      backend: "https://beta.medusa.babysonbroadway.com",
+      backend: process.env.MEDUSA_ADMIN_BACKEND_URL,
       develop: {
         open: process.env.OPEN_BROWSER !== "false",
 	allowedHosts: 'all'
